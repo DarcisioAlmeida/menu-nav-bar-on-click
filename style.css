@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #808080;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+input[type="radio"] {
+  display: none;
+}
+h1 {
+  position: absolute;
+  top: 100px;
+}
+p {
+  position: absolute;
+  top: 180px;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  height: 50px;
+  width: 500px;
+}
+label div {
+  font-size: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 80px;
+  text-transform: uppercase;
+  margin: 5px;
+}
+label div:hover {
+  background: #00bfff;
+  color: #fff;
+  box-shadow: 0px 2px 2px #000;
+}
+/* IDs */
+#home:checked ~ .container label:nth-child(1) > div,
+#about:checked ~ .container label:nth-child(2) > div,
+#blog:checked ~ .container label:nth-child(3) > div,
+#portfolio:checked ~ .container label:nth-child(4) > div,
+#contact:checked ~ .container label:nth-child(5) > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0;
+  background: #00bfff;
+  color: #fff;
+  box-shadow: 0px 2px 2px #000;
+  text-align: center;
+}
+
